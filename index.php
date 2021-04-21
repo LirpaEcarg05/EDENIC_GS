@@ -205,7 +205,7 @@
                 <div class="col-12">
                     <div class="hero-content">
                         <h6>Choose Best</h6>
-                        <h2>Accessories to gracious <br> living.</h2>
+                        <h2>Accessories for gracious <br> living.</h2>
                         <a href="#" class="btn essence-btn">view collection</a>
                     </div>
                 </div>
