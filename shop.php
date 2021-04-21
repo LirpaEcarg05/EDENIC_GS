@@ -80,13 +80,13 @@
                                     <li><a href="shop.php">Shop</a></li>
                                     <li><a href="single-product-details.html">Product Details</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="plantcare.php">Plant Care</a></li>
                                     <li><a href="single-blog.html">Single Blog</a></li>
                                     <li><a href="regular-page.html">Regular Page</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="plantcare.php">Plant Care</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -109,7 +109,7 @@
                 </div>
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="#"><img src="img/core-img/user.svg" alt=""></a>
+                    <a href="loginAndsignup.html"><img src="img/core-img/user.svg" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
