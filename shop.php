@@ -44,20 +44,30 @@
                             <li><a href="#">Shop</a>
                                 <div class="megamenu">
                                     <ul class="single-mega cn-col-4">
-                                        <li class="title">Outdoor Plants</li>
-                                        <li><a href="shop.php">Tall Plants</a></li>
-                                        <li><a href="shop.php">Pet Friendly Plants</a></li>
+                                        <li class="title"><a href="shop.php">INDOOR PLANTS</a></li>
+                                        <li><a href="shop.php">Money Tree</a></li>
+                                        <li><a href="shop.php">Fiddle Leaf Fig</a></li>
+                                        <li><a href="shop.php">Rubber Plant</a></li>
+                                        <li><a href="shop.php">Bamboo Palm</a></li>
+                                        <li><a href="shop.php">Snake Plant</a></li>
                                         
                                     </ul>
                                     <ul class="single-mega cn-col-4">
-                                        <li class="title">Indoor Plants</li>
-                                        <li><a href="shop.php">Table Tops Plants</a></li>
-                                        <li><a href="shop.php">Shelf Plants</a></li>
+                                        <li class="title"><a href="shop.php">OUTDOOR PLANTS</a></li>
+                                        <li><a href="shop.php">Caladium</a></li>
+                                        <li><a href="shop.php">Colues</a></li>
+                                        <li><a href="shop.php">Tropical Hibiscus</a></li>
+                                        <li><a href="shop.php">Generanium Plant</a></li>
+                                        <li><a href="shop.php">Boxwood and Myrtle</a></li>
                                         
                                     </ul>
                                     <ul class="single-mega cn-col-4">
-                                        <li class="title">Herbs Plants</li>
-                                        <li><a href="shop.php">Basili</a></li>
+                                        <li class="title"><a href="shop.php">HERB PLANTS</a></li>
+                                        <li><a href="shop.php">Parsley</a></li>
+                                        <li><a href="shop.php">Mint</a></li>
+                                        <li><a href="shop.php">Dill</a></li>
+                                        <li><a href="shop.php">Rosemary</a></li>
+                                        <li><a href="shop.php">Lemon Verbana</a></li>
                                     </ul>
                                     <div class="single-mega cn-col-4">
                                         <img src="img/bg-img/bg21.jpg" alt="">
