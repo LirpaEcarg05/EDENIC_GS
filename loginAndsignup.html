@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,41 @@
     <title>Login and Sign Up Form</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/loginAndsignup.css">
+    <link rel="stylesheet" href="css/core-style.css">
 </head>
+
 <body>
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.php"><img src="img/core-img/LOGO5.png" alt=""></a>Log In / Sign Up
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+            
+                    <!-- Nav End -->
+                </div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <div class="user-login-info">
+                    <a href="loginAndsignup.html"><img src="img/core-img/user.svg" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
     <div class="container">
         <form class="signUp">
             <h3>Create Your Account</h3>
@@ -31,7 +65,7 @@
             <button class="form-btn dx" type="submit">Log In</button>
         </form>
     </div>
-<script src="./js/loginAndsignup.js"></script>
+    <script src="./js/loginAndsignup.js"></script>
 </body>
 
 </html>
