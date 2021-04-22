@@ -1169,7 +1169,7 @@ img {
       font-family: "Ubuntu", sans-serif;
       letter-spacing: 1px;
       margin-bottom: 0;
-      color: #0315ff; }
+      color:green; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .breadcumb_area.breadcumb-style-two .page-title h2 {
           font-size: 48px; } }
