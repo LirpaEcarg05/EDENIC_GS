@@ -85,7 +85,7 @@
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
                                     <li><a href="single-blog.html">Single Blog</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
+                                    <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </li>
