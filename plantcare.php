@@ -73,7 +73,7 @@
                                         <li><a href="shop.php">Lemon Verbana</a></li>
                                     </ul>
                                     <div class="single-mega cn-col-4">
-                                        <img src="img/bg-img/bg-6.jpg" alt="">
+                                        <img src="img/bg-img/bg21.jpg" alt="">
                                     </div>
                                 </div>
                             </li>
@@ -212,6 +212,16 @@
                 <div class="col-12">
                     <div class="page-title text-center">
                         <h2>General Plant Care</h2>
+                        <hr>
+                    </div>
+                    <div ><center>
+                        <p>Though most of the plants available here is low-maintenance, some love <br> and attention is 
+                        key to make sure that your plant lives a long, happy, and healthy life. <br>
+                        It’s also important to note that just like you, plants experience stress too, and <br> it 
+                        is quite normal for them to experience this as they adjust to their new homes. <br><br>
+                        <b>See below for our quick tips on how to make your plants thrive:</b>
+                        </p>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -227,18 +237,20 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog1.jpg" alt="">
+                        <img src="img/bg-img/qt1.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tips #1</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">Quick Tips #1</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>On average, indoor plants are watered once a week. But the best way is to check the soil 
+                                by dipping your finger or using a stick. If the soil is still soggy or sticky, no need to 
+                                water yet. Eventually, you will get the hang of your plant’s watering schedule.</p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -247,18 +259,19 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog2.jpg" alt="">
+                        <img src="img/bg-img/qt2.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tips #2</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">Quick Tips #2</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>Water all the way through the pot until you see some seeping out from the drainage holes. 
+                                This makes sure that the water reaches that plant’s root system.</p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -267,18 +280,20 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog3.jpg" alt="">
+                        <img src="img/bg-img/qt3.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tip #3</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">Quick Tips #3</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>Plants should have a source of light (though the intensity varies). Plants placed along 
+                                dark corners of the house or in the middle of offices should be rotated to areas near 
+                                windows so that it can absorb some form of light.</p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -287,18 +302,19 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog4.jpg" alt="">
+                        <img src="img/bg-img/qt4.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tips #4</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">Quick Tips #4</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>Dust may build up on the leaves. To bring back the shine of the leaves and to allow them to 
+                                breathe, regularly wipe them with a damp soft cloth or if your space allows, give them a shower.</p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -307,18 +323,21 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog5.jpg" alt="">
+                        <img src="img/bg-img/qt5.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tips #5</a>
                         </div>
                         <!-- Hover Content -->
-                        <div class="hover-content">
+                        <div class="hover-content"> 
                             <!-- Post Title -->
-                            <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                           <div class="hover-post-title">
+                                <a href="#">Quick Tips #5</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>Getting rid of old-growth on your plants will help your plants grow again. This is 
+                                kind of like how trimming the dead ends of your hair will help your hair grow again. 
+                                After winter is when you’ll see some of the tips or leaves of your plant dying, so a 
+                                simple plant haircut will do!</p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -327,18 +346,21 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog6.jpg" alt="">
+                        <img src="img/bg-img/qt6.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">Quick Tips #6</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">Quick Tips #6</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
+                            <p>Try to replicate your plant’s native habitat. This includes the type of soil you buy, 
+                                humidity, temperature, water and sunlight. Researching your plant’s native habitat 
+                                will help you discover the climate and terrain your plant prefers. Adapting this to 
+                                the way you care for your plant will be beneficial for your plant’s longevity. </p>
                             <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -348,8 +370,8 @@
     </div>
     <!-- ##### Blog Wrapper Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer_area clearfix">
         <div class="container">
             <div class="row">
                 <!-- Single Widget Area -->
@@ -357,13 +379,13 @@
                     <div class="single_widget_area d-flex mb-30">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
+                            <a href="#"><img src="img/core-img/LOGO5A.png" alt=""></a>
                         </div>
                         <!-- Footer Menu -->
                         <div class="footer_menu">
                             <ul>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="shop.php">Shop</a></li>
+                                <li><a href="plantcare.php">Plant Care</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -412,21 +434,18 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="row mt-5">
+            ?>
+<div class="row mt-5">
                 <div class="col-md-12 text-center">
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
             </div>
-            
+
         </div>
-
-
-
     </footer>
     <!-- ##### Footer Area End ##### -->
 
