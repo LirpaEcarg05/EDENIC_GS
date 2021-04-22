@@ -64,7 +64,7 @@
                                         <li><a href="shop.php">Colues</a></li>
                                         <li><a href="shop.php">Tropical Hibiscus</a></li>
                                         <li><a href="shop.php">Generanium Plant</a></li>
-                                        <li><a href="shop.php">Boxwood and Myrtle</a></li>
+                                        <!-- <li><a href="shop.php">Boxwood and Myrtle</a></li> -->
                                         
                                     </ul>
                                     <ul class="single-mega cn-col-4">
