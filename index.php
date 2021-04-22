@@ -62,7 +62,7 @@
                                         <li class="title"><a href="shop.php">OUTDOOR PLANTS</a></li>
                                         <li><a href="shop.php">Caladium</a></li>
                                         <li><a href="shop.php">Colues</a></li>
-                                        <li><a href="shop.php">Tropical </a></li>
+                                        <li><a href="shop.php">Tropical Hibiscus</a></li>
                                         <li><a href="shop.php">Generanium Plant</a></li>
                                         <li><a href="shop.php">Boxwood and Myrtle</a></li>
                                         
