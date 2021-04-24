@@ -56,29 +56,29 @@
                                 <div class="megamenu">
                                 <ul class="single-mega cn-col-4">
                                         <li class="title"><a href="shop.php">INDOOR PLANTS</a></li>
-                                        <li><a href="shop.php">Money Tree</a></li>
-                                        <li><a href="shop.php">Fiddle Leaf Fig</a></li>
-                                        <li><a href="shop.php">Rubber Plant</a></li>
-                                        <li><a href="shop.php">Bamboo Palm</a></li>
-                                        <li><a href="shop.php">Snake Plant</a></li>
+                                        <li><a>Money Tree</a></li>
+                                        <li><a>Fiddle Leaf Fig</a></li>
+                                        <li><a>Rubber Plant</a></li>
+                                        <li><a>Bamboo Palm</a></li>
+                                        <li><a>Snake Plant</a></li>
                                         
                                     </ul>
                                     <ul class="single-mega cn-col-4">
                                         <li class="title"><a href="shop.php">OUTDOOR PLANTS</a></li>
-                                        <li><a href="shop.php">Caladium</a></li>
-                                        <li><a href="shop.php">Colues</a></li>
-                                        <li><a href="shop.php">Tropical Hibiscus</a></li>
-                                        <li><a href="shop.php">Generanium Plant</a></li>
-                                        <li><a href="shop.php">Boxwood and Myrtle</a></li>
+                                        <li><a>Caladium</a></li>
+                                        <li><a>Colues</a></li>
+                                        <li><a>Tropical Hibiscus</a></li>
+                                        <li><a>Generanium Plant</a></li>
+                                        <li><a>Boxwood and Myrtle</a></li>
                                         
                                     </ul>
                                     <ul class="single-mega cn-col-4">
                                         <li class="title"><a href="shop.php">HERB PLANTS</a></li>
-                                        <li><a href="shop.php">Parsley</a></li>
-                                        <li><a href="shop.php">Mint</a></li>
-                                        <li><a href="shop.php">Dill</a></li>
-                                        <li><a href="shop.php">Rosemary</a></li>
-                                        <li><a href="shop.php">Lemon Verbana</a></li>
+                                        <li><a>Parsley</a></li>
+                                        <li><a>Mint</a></li>
+                                        <li><a>Dill</a></li>
+                                        <li><a>Rosemary</a></li>
+                                        <li><a>Lemon Verbana</a></li>
                                     </ul>
                                     <div class="single-mega cn-col-4">
                                         <img src="img/bg-img/bg21.jpg" alt="">
