@@ -1,45 +1,49 @@
-<?php
-// Initialize shopping cart class 
-include_once 'Cart.class.php';
-$cart = new Cart;
-
+<?php 
 // Include the database config file 
-require_once 'dbConfig.php';
+require_once 'dbConfig.php'; 
+ 
+// Initialize shopping cart class 
+include_once 'Cart.class.php'; 
+$cart = new Cart; 
+ 
+// If the cart is empty, redirect to the products page 
+if($cart->total_items() <= 0){ 
+    header("Location: index.php"); 
+} 
+ 
+// Get posted data from session 
+$postData = !empty($_SESSION['postData'])?$_SESSION['postData']:array(); 
+unset($_SESSION['postData']); 
+ 
+// Get status message from session 
+$sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:''; 
+if(!empty($sessData['status']['msg'])){ 
+    $statusMsg = $sessData['status']['msg']; 
+    $statusMsgType = $sessData['status']['type']; 
+    unset($_SESSION['sessData']['status']); 
+} 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Checkout | EDENIC </title>
+<meta charset="utf-8">
 
-    <!-- Title  -->
-    <title>EDENIC</title>
+<!-- Favicon  -->
+<link rel="icon" href="img/core-img/favicon.ico">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom style -->
-    <link href="css/style.css" rel="stylesheet">
-
-
+<!-- Core Style CSS -->
+<link rel="stylesheet" href="css/core-style.css">
+<link rel="stylesheet" href="style.css">
 </head>
-</head>
-
 <body>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header_area">
+<!-- ##### Header Area Start ##### -->
+<header class="header_area">
+        <!-- <div class="html custom html_topbar_left">
+            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
+        </div> -->
+
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
@@ -59,21 +63,20 @@ require_once 'dbConfig.php';
                     <div class="classynav">
                         <ul>
                             <li><a href="shop.php">Shop</a>
-                            </li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
                                     <li><a href="shop.php">Shop</a></li>
-                                    <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
                                     <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
                                     <li><a href="aboutUs.php">About Us</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
                             <li><a href="plantcare.php">Plant Care</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="contact.php">Contact</a>
+
+
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -99,61 +102,94 @@ require_once 'dbConfig.php';
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt="">
-                        <span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span>
-                    </a>
+                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
                 </div>
             </div>
 
         </div>
-    </header><br><br><br><br><br>
-    <!-- ##### Header Area End ##### -->
+    </header>
+<br>
 
-
-
-    <div class="containershop">
-        <Center>
-            <h1>PRODUCTS</h1>
-        </Center>
-
-        <!-- Cart basket -->
-        <!-- <div class="cart-view">
-            <a href="viewCart.php" title="View Cart"><i class="icart"></i> <?php echo ($cart->total_items() > 0) ? "<center>" . $cart->total_items() . ' Items' : 'Empty'; ?></a>
-        </div> -->
-
-        <!-- Product list -->
-        <div class="row col-lg-12">
-            <?php
-            // Get products from database 
-            $result = $db->query("SELECT * FROM tblproduct ORDER BY id DESC LIMIT 10");
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-            ?>
-                    <div class="card col-lg-4">
-                        <div class="card-body">
-                            <center>
-                                <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo '$' . $row["price"] . ' USD'; ?></h6>
-                            </center>
-                            <div style="margin-left:55px" class="product-image"><img class="ml-5 mt-3" style="height:140px;width:160px;" src="<?php echo $row["image"]; ?>"></div>
-
-                            <!-- <p class="card-text"><?php echo $row["image"]; ?></p> -->
-                            <center>
-                                <a style="margin-top:15px" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary">Add to Cart</a>
-                            </center>
+<div class="container">
+    <h1>CHECKOUT</h1>
+    <div class="col-12">
+        <div class="checkout">
+            <div class="row">
+                <?php if(!empty($statusMsg) && ($statusMsgType == 'success')){ ?>
+                <div class="col-md-12">
+                    <div class="alert alert-success"><?php echo $statusMsg; ?></div>
+                </div>
+                <?php }else if(!empty($statusMsg) && ($statusMsgType == 'error')){ ?>
+                <div class="col-md-12">
+                    <div class="alert alert-danger"><?php echo $statusMsg; ?></div>
+                </div>
+                <?php } ?>
+				
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Your Cart</span>
+                        <span class="badge badge-secondary badge-pill"><?php echo $cart->total_items(); ?></span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <?php 
+                        if($cart->total_items() > 0){ 
+                            //get cart items from session 
+                            $cartItems = $cart->contents(); 
+                            foreach($cartItems as $item){ 
+                        ?>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><?php echo $item["name"]; ?></h6>
+                                <small class="text-muted"><?php echo '$'.$item["price"]; ?>(<?php echo $item["qty"]; ?>)</small>
+                            </div>
+                            <span class="text-muted"><?php echo '$'.$item["subtotal"]; ?></span>
+                        </li>
+                        <?php } } ?>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (USD)</span>
+                            <strong><?php echo '$'.$cart->total(); ?></strong>
+                        </li>
+                    </ul>
+                    <a href="index.php" class="btn btn-block btn-info">Add Items</a>
+                </div>
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <form method="post" action="cartAction.php">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" name="first_name" value="<?php echo !empty($postData['first_name'])?$postData['first_name']:''; ?>" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" name="last_name" value="<?php echo !empty($postData['last_name'])?$postData['last_name']:''; ?>" required>
+                            </div>
                         </div>
-                    </div>
-                <?php }
-            } else { ?>
-                <p>Product(s) not found.....</p>
-            <?php } ?>
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" name="phone" value="<?php echo !empty($postData['phone'])?$postData['phone']:''; ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="last_name">Address</label>
+                            <input type="text" class="form-control" name="address" value="<?php echo !empty($postData['address'])?$postData['address']:''; ?>" required>
+                        </div>
+                        <input type="hidden" name="action" value="placeOrder"/>
+                        <input class="btn btn-success btn-lg btn-block" type="submit" name="checkoutSubmit" value="Place Order">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <br><br>
+<br><br>
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer_area clearfix">
         <div class="container">
             <div class="row">
                 <!-- Single Widget Area -->
@@ -216,7 +252,7 @@ require_once 'dbConfig.php';
                     </div>
                 </div>
             </div>
-
+            ?>
             <div class="row mt-5">
                 <div class="col-md-12 text-center">
                     <p>
@@ -246,6 +282,6 @@ require_once 'dbConfig.php';
     <!-- Active js -->
     <script src="js/active.js"></script>
 
-</body>
 
+</body>
 </html>

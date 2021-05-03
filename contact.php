@@ -1,3 +1,11 @@
+<?php
+// Initialize shopping cart class 
+include_once 'Cart.class.php';
+$cart = new Cart;
+
+// Include the database config file 
+require_once 'dbConfig.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +51,7 @@
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
                 <!-- Logo -->
-                <a class="nav-brand" href="index.php"><img src="img/core-img/LOGO5.png" alt=""></a>
+                <a class="nav-brand" href="home.php"><img src="img/core-img/LOGO5.png" alt=""></a>
                 <!-- Navbar Toggler -->
                 <div class="classy-navbar-toggler">
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -57,57 +65,20 @@
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-                            <li><a href="#">Shop</a>
-                                <div class="megamenu">
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title"><a href="shop.php">INDOOR PLANTS</a></li>
-                                        <li><a>Money Tree</a></li>
-                                        <li><a>Fiddle Leaf Fig</a></li>
-                                        <li><a>Rubber Plant</a></li>
-                                        <li><a>Bamboo Palm</a></li>
-                                        <li><a>Snake Plant</a></li>
-
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title"><a href="shop.php">OUTDOOR PLANTS</a></li>
-                                        <li><a>Caladium</a></li>
-                                        <li><a>Colues</a></li>
-                                        <li><a>Tropical Hibiscus</a></li>
-                                        <li><a>Generanium Plant</a></li>
-                                        <li><a>Boxwood and Myrtle</a></li>
-
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title"><a href="shop.php">HERB PLANTS</a></li>
-                                        <li><a>Parsley</a></li>
-                                        <li><a>Mint</a></li>
-                                        <li><a>Dill</a></li>
-                                        <li><a>Rosemary</a></li>
-                                        <li><a>Lemon Verbana</a></li>
-                                    </ul>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="img/bg-img/bg21.jpg" alt="">
-                                    </div>
-                                </div>
-                            </li>
+                            <li><a href="shop.php">Shop</a>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
-                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="home.php">Home</a></li>
                                     <li><a href="shop.php">Shop</a></li>
-                                    <li><a href="single-product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
-                                    <li><a href="single-blog.html">Single Blog</a></li>
-                                    <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="aboutUs.php">About Us</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
                             <li><a href="plantcare.php">Plant Care</a></li>
-                            <li><a href="contact.html">Contact</a>
-                                <!-- <ul class="dropdown">
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="contact.html">Contact</a>
-                            </li> -->
+                            <li><a href="contact.php">Contact</a>
+                                
 
                         </ul>
                     </div>
@@ -134,7 +105,7 @@
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
+                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
                 </div>
             </div>
 
@@ -142,87 +113,7 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Right Side Cart Area ##### -->
-    <div class="cart-bg-overlay"></div>
-
-    <div class="right-side-cart-area">
-
-        <!-- Cart Button -->
-        <!-- <div class="cart-button">
-            <a href="#" id="rightSideCart"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
-        </div> -->
-
-        <div class="cart-content d-flex">
-
-            <!-- Cart List Area -->
-            <div class="cart-list">
-                <!-- Single Cart Item -->
-                <!-- <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/product-1.jpg" class="cart-thumb" alt=""> -->
-                <!-- Cart Item Desc -->
-                <!-- <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div> -->
-
-                <!-- Single Cart Item -->
-                <!-- <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/product-2.jpg" class="cart-thumb" alt=""> -->
-                <!-- Cart Item Desc -->
-                <!-- <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div> -->
-
-                <!-- Single Cart Item -->
-                <!-- <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/product-3.jpg" class="cart-thumb" alt=""> -->
-                <!-- Cart Item Desc -->
-                <!-- <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div> -->
-            </div>
-
-            <!-- Cart Summary -->
-            <!-- <div class="cart-amount-summary">
-
-                <h2>Summary</h2>
-                <ul class="summary-table">
-                    <li><span>subtotal:</span> <span>$274.00</span></li>
-                    <li><span>delivery:</span> <span>Free</span></li>
-                    <li><span>discount:</span> <span>-15%</span></li>
-                    <li><span>total:</span> <span>$232.00</span></li>
-                </ul>
-                <div class="checkout-btn mt-100">
-                    <a href="checkout.html" class="btn essence-btn">check out</a>
-                </div>
-            </div> -->
-        </div>
-    </div>
-    <!-- ##### Right Side Cart End ##### -->
-
+   
 
     <div class="contact-area d-flex align-items-center">
 
@@ -241,8 +132,9 @@
 
             <div class="contact-address mt-50">
                 <p><span>address:</span> Nasipit Road Talamban Cebu City</p>
-                <p><span>telephone:</span> 09221212 wa diay to</p>
-                <p><a href="mailto:contact@essence.com">app.netlify.edenic.com</a></p>
+                <p><span>telephone:</span> +639222758847</p>
+                <p><a >app.netlify.edenic.com</a></p>
+                <!-- <p><a href="mailto:contact@essence.com">app.netlify.edenic.com</a></p> -->
             </div>
         </div>
 
@@ -266,7 +158,7 @@
                             <ul>
                                 <li><a href="shop.php">Shop</a></li>
                                 <li><a href="plantcare.php">Plant Care</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                         </div>
                     </div>

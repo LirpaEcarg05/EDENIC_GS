@@ -6,7 +6,6 @@ $cart = new Cart;
 // Include the database config file 
 require_once 'dbConfig.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,21 +24,17 @@ require_once 'dbConfig.php';
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/team.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom style -->
-    <link href="css/style.css" rel="stylesheet">
-
-
-</head>
 </head>
 
 <body>
     <!-- ##### Header Area Start ##### -->
     <header class="header_area">
+        <!-- <div class="html custom html_topbar_left">
+            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
+        </div> -->
+
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
@@ -58,8 +53,7 @@ require_once 'dbConfig.php';
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-                            <li><a href="shop.php">Shop</a>
-                            </li>
+                            <li><a href="shop.php">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
@@ -67,13 +61,18 @@ require_once 'dbConfig.php';
                                     <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
                                     <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
-                                    <li><a href="aboutUs.php">About Us</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
+                                    <li><a href="single-blog.html">About Us</a></li>
+                                    <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
                             <li><a href="plantcare.php">Plant Care</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="contact.php">Contact</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="home.php">Home</a></li>
+                                    <li><a href="contact.php">Contact</a>
+                            </li> -->
+
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -99,59 +98,134 @@ require_once 'dbConfig.php';
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt="">
-                        <span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span>
+                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    
+
+    <!-- ##### Blog Wrapper Area Start ##### -->
+    <div class="single-blog-wrapper">
+
+        <!-- Single Blog Post Thumb -->
+        <div class="single-blog-post-thumb">
+            <img src="img/bg-img/ab21.png" alt="">
+        </div>
+
+        <!-- Single Blog Content Wrap -->
+        <div class="single-blog-content-wrapper d-flex">
+
+            <!-- Blog Content -->
+            <div class="single-blog--text">
+                <center><h1>ABOUT US</h1></center>
+                <br>
+                <p>EDENIC is being in horticulture helps us build more sustainable gardens 
+                    as it goes beyond just the aesthetics of the gardens we create.
+                We design and build gardens ranging from condominium balconies, to township 
+                developments – whether hardscape or softscape, indoor or outdoor.</p>
+
+                <blockquote>
+                    <h6><i class="fa fa-quote-left" aria-hidden="true"></i> We are dedicated in 
+                    making plants accessible to you by hand-picking plants that would complement your space and 
+                    deliver them at your doorstep and provide care guides specific to your chosen plants’ 
+                    needs – allowing them not only to survive but also flourish.
+                </h6>
+                    <!-- <span>Liam Neeson</span> -->
+                </blockquote>
+
+                <p>We will work with you from conceptualization to execution to make sure that your space will 
+                    be a reflection of your personality and specific needs. <b> Plants transform your space, 
+                    elevate your mood, boost your creativity and even improve your health. </b> Whether you’re 
+                    plant obsessed or a first time plant parent, we’ve got everything you need to keep your green 
+                    friends happy, healthy and thriving. And you can also see our Key Features in the side. </p>
+            </div>
+
+            <!-- About US -->
+            <div class="related-blog-post">
+                <!-- Single Related Blog Post -->
+                <div class="single-related-blog-post">
+                    <img src="img/bg-img/ab22.png" alt="">
+                    <a href="#">
+                        <h5>Prep Nursery</h5>
+                    </a>
+                </div>
+                <!-- Single Related Blog Post -->
+                <div class="single-related-blog-post">
+                    <img src="img/bg-img/ab23.png" alt="">
+                    <a href="#">
+                        <h5>Trained Workers</h5>
+                    </a>
+                </div>
+                <!-- Single Related Blog Post -->
+                <div class="single-related-blog-post">
+                    <img src="img/bg-img/ab24.png" alt="">
+                    <a href="#">
+                        <h5>Production Nursery</h5>
+                    </a>
+                </div>
+                <!-- Single Related Blog Post -->
+                <div class="single-related-blog-post">
+                    <img src="img/bg-img/ab25.png" alt="">
+                    <a href="#">
+                        <h5>In House Holticulturist</h5>
                     </a>
                 </div>
             </div>
 
         </div>
-    </header><br><br><br><br><br>
-    <!-- ##### Header Area End ##### -->
+    </div>
+    <!-- ##### Key Features Area End ##### -->
 
-
-
-    <div class="containershop">
-        <Center>
-            <h1>PRODUCTS</h1>
-        </Center>
-
-        <!-- Cart basket -->
-        <!-- <div class="cart-view">
-            <a href="viewCart.php" title="View Cart"><i class="icart"></i> <?php echo ($cart->total_items() > 0) ? "<center>" . $cart->total_items() . ' Items' : 'Empty'; ?></a>
-        </div> -->
-
-        <!-- Product list -->
-        <div class="row col-lg-12">
-            <?php
-            // Get products from database 
-            $result = $db->query("SELECT * FROM tblproduct ORDER BY id DESC LIMIT 10");
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-            ?>
-                    <div class="card col-lg-4">
-                        <div class="card-body">
-                            <center>
-                                <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo '$' . $row["price"] . ' USD'; ?></h6>
-                            </center>
-                            <div style="margin-left:55px" class="product-image"><img class="ml-5 mt-3" style="height:140px;width:160px;" src="<?php echo $row["image"]; ?>"></div>
-
-                            <!-- <p class="card-text"><?php echo $row["image"]; ?></p> -->
-                            <center>
-                                <a style="margin-top:15px" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary">Add to Cart</a>
-                            </center>
-                        </div>
+<!-- ##The Team Start -->
+<div class="team-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Team </h2>
+                <!-- <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p> -->
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="./img/team-img/daryll.JPG">
+                        <h3 class="name">Darryl Vildosola</h3>
+                        <p class="title">Store Manager</p>
+                        <p class="description">Developing store strategies to raise customers' pool, expand 
+                            store traffic and optimize profitability. Meeting sales goals by training, motivating, 
+                            mentoring and providing feedback to store staff. Ensuring high levels of customers 
+                            satisfaction through excellent service.</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
-                <?php }
-            } else { ?>
-                <p>Product(s) not found.....</p>
-            <?php } ?>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="./img/team-img/april.JPG">
+                        <h3 class="name">April Grace Diez</h3>
+                        <p class="title">Assistant Manager</p>
+                        <p class="description">Assist the Retail Store Manager in planning 
+                            and implementing strategies to attract customers. She is the one who coordinate 
+                            daily customer service operations. Track the progress of weekly, monthly, quarterly 
+                            and annual objectives. Monitor and maintain store inventory. </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="./img/team-img/aldrin.JPG">
+                        <h3 class="name">James Aldrin Odiong</h3>
+                        <p class="title">Sales Associate</p>
+                        <p class="description">Drives sales through engagement of customers, suggestive selling, 
+                            and sharing product knowledge. Greets and receives customers in a welcoming manner. 
+                            Responds to customers' questions. Directs customers by escorting them to racks and 
+                            counters.</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <br><br>
-
+<!-- ##The Team Ean -->
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer_area clearfix">
         <div class="container">
@@ -216,7 +290,7 @@ require_once 'dbConfig.php';
                     </div>
                 </div>
             </div>
-
+            ?>
             <div class="row mt-5">
                 <div class="col-md-12 text-center">
                     <p>
@@ -245,6 +319,10 @@ require_once 'dbConfig.php';
     <script src="js/classy-nav.min.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+
+    <!-- ##The team Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

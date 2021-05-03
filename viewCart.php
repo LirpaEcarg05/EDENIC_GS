@@ -1,45 +1,44 @@
-<?php
+<?php 
 // Initialize shopping cart class 
-include_once 'Cart.class.php';
-$cart = new Cart;
-
-// Include the database config file 
-require_once 'dbConfig.php';
+include_once 'Cart.class.php'; 
+$cart = new Cart; 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>View Cart | EDENIC</title>
+<meta charset="utf-8">
 
-    <!-- Title  -->
-    <title>EDENIC</title>
+<!-- Favicon  -->
+<link rel="icon" href="img/core-img/favicon.ico">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+<!-- Core Style CSS -->
+<link rel="stylesheet" href="css/core-style.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom style -->
-    <link href="css/style.css" rel="stylesheet">
-
-
+<script>
+function updateCartItem(obj,id){
+    $.get("cartAction.php", {action:"updateCartItem", id:id, qty:obj.value}, function(data){
+        if(data == 'ok'){
+            location.reload();
+        }else{
+            alert('Cart update failed, please try again.');
+        }
+    });
+}
+</script>
 </head>
-</head>
-
 <body>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header_area">
+<!-- ##### Header Area Start ##### -->
+<header class="header_area">
+        <!-- <div class="html custom html_topbar_left">
+            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
+        </div> -->
+
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
@@ -59,21 +58,20 @@ require_once 'dbConfig.php';
                     <div class="classynav">
                         <ul>
                             <li><a href="shop.php">Shop</a>
-                            </li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
                                     <li><a href="shop.php">Shop</a></li>
-                                    <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
                                     <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
                                     <li><a href="aboutUs.php">About Us</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
                             <li><a href="plantcare.php">Plant Care</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="contact.php">Contact</a>
+
+
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -99,61 +97,83 @@ require_once 'dbConfig.php';
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt="">
-                        <span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span>
-                    </a>
+                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
                 </div>
             </div>
 
         </div>
-    </header><br><br><br><br><br>
+    </header>
     <!-- ##### Header Area End ##### -->
 
+<br><br>
 
+<div class="container">
 
-    <div class="containershop">
-        <Center>
-            <h1>PRODUCTS</h1>
-        </Center>
-
-        <!-- Cart basket -->
-        <!-- <div class="cart-view">
-            <a href="viewCart.php" title="View Cart"><i class="icart"></i> <?php echo ($cart->total_items() > 0) ? "<center>" . $cart->total_items() . ' Items' : 'Empty'; ?></a>
-        </div> -->
-
-        <!-- Product list -->
-        <div class="row col-lg-12">
-            <?php
-            // Get products from database 
-            $result = $db->query("SELECT * FROM tblproduct ORDER BY id DESC LIMIT 10");
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-            ?>
-                    <div class="card col-lg-4">
-                        <div class="card-body">
-                            <center>
-                                <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo '$' . $row["price"] . ' USD'; ?></h6>
-                            </center>
-                            <div style="margin-left:55px" class="product-image"><img class="ml-5 mt-3" style="height:140px;width:160px;" src="<?php echo $row["image"]; ?>"></div>
-
-                            <!-- <p class="card-text"><?php echo $row["image"]; ?></p> -->
-                            <center>
-                                <a style="margin-top:15px" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary">Add to Cart</a>
-                            </center>
-                        </div>
+    <h1>SHOPPING CART</h1>
+    <div class="row">
+        <div class="cart">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="45%">Product</th>
+                                <th width="10%">Price</th>
+                                <th width="15%">Quantity</th>
+                                <th class="text-right" width="20%">Total</th>
+                                <th width="10%"> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            if($cart->total_items() > 0){ 
+                                // Get cart items from session 
+                                $cartItems = $cart->contents(); 
+                                foreach($cartItems as $item){ 
+                            ?>
+                            <tr>
+                                <td><?php echo $item["name"]; ?></td>
+                                <td><?php echo '$'.$item["price"].' USD'; ?></td>
+                                <td><input class="form-control" type="number" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"/></td>
+                                <td class="text-right"><?php echo '$'.$item["subtotal"].' USD'; ?></td>
+                                <td class="text-right"><button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')?window.location.href='cartAction.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>':false;"><i class="itrash"></i> Delete</button> </td>
+                            </tr>
+                            <?php } }else{ ?>
+                            <tr><td colspan="5"><p>Your cart is empty.....</p></td>
+                            <?php } ?>
+                            <?php if($cart->total_items() > 0){ ?>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Cart Total</strong></td>
+                                <td class="text-right"><strong><?php echo '$'.$cart->total().' USD'; ?></strong></td>
+                                <td></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12  col-md-6">
+                        <a href="shop.php" class="btn btn-block btn-light">Continue Shopping</a>
                     </div>
-                <?php }
-            } else { ?>
-                <p>Product(s) not found.....</p>
-            <?php } ?>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <?php if($cart->total_items() > 0){ ?>
+                        <a href="checkout.php" class="btn btn-lg btn-block btn-primary">Checkout</a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <br><br>
+<br><br><br><br>
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer_area clearfix">
         <div class="container">
             <div class="row">
                 <!-- Single Widget Area -->
@@ -216,7 +236,7 @@ require_once 'dbConfig.php';
                     </div>
                 </div>
             </div>
-
+            ?>
             <div class="row mt-5">
                 <div class="col-md-12 text-center">
                     <p>
@@ -245,7 +265,5 @@ require_once 'dbConfig.php';
     <script src="js/classy-nav.min.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-
 </body>
-
 </html>
