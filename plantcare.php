@@ -24,7 +24,7 @@ require_once 'dbConfig.php';
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
 </head>
 
@@ -80,9 +80,9 @@ require_once 'dbConfig.php';
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
                     <a href="#"><img src="img/core-img/user.svg" alt=""></a>
@@ -145,7 +145,6 @@ require_once 'dbConfig.php';
                             <p>On average, indoor plants are watered once a week. But the best way is to check the soil 
                                 by dipping your finger or using a stick. If the soil is still soggy or sticky, no need to 
                                 water yet. Eventually, you will get the hang of your plant’s watering schedule.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +165,6 @@ require_once 'dbConfig.php';
                             </div>
                             <p>Water all the way through the pot until you see some seeping out from the drainage holes. 
                                 This makes sure that the water reaches that plant’s root system.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +186,6 @@ require_once 'dbConfig.php';
                             <p>Plants should have a source of light (though the intensity varies). Plants placed along 
                                 dark corners of the house or in the middle of offices should be rotated to areas near 
                                 windows so that it can absorb some form of light.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -209,7 +206,6 @@ require_once 'dbConfig.php';
                             </div>
                             <p>Dust may build up on the leaves. To bring back the shine of the leaves and to allow them to 
                                 breathe, regularly wipe them with a damp soft cloth or if your space allows, give them a shower.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -232,7 +228,6 @@ require_once 'dbConfig.php';
                                 kind of like how trimming the dead ends of your hair will help your hair grow again. 
                                 After winter is when you’ll see some of the tips or leaves of your plant dying, so a 
                                 simple plant haircut will do!</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,7 +250,6 @@ require_once 'dbConfig.php';
                                 humidity, temperature, water and sunlight. Researching your plant’s native habitat 
                                 will help you discover the climate and terrain your plant prefers. Adapting this to 
                                 the way you care for your plant will be beneficial for your plant’s longevity. </p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>

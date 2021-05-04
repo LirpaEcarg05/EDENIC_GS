@@ -23,15 +23,15 @@ require_once 'dbConfig.php';
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
-    <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Custom style -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
 
 
 </head>
@@ -56,24 +56,23 @@ require_once 'dbConfig.php';
                         <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                     </div>
                     <!-- Nav Start -->
-                    <div class="classynav">
+                    <div class="classynav mt-3">
                         <ul>
-                            <li><a href="shop.php">Shop</a>
-                            </li>
+                            <li><a href="shop.php" class="">Shop</a>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
                                     <li><a href="shop.php">Shop</a></li>
-                                    <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
                                     <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
                                     <li><a href="aboutUs.php">About Us</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
                             <li><a href="plantcare.php">Plant Care</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="contact.php">Contact</a>
+
+
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -90,12 +89,12 @@ require_once 'dbConfig.php';
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href=""><img src="img/core-img/user.svg" alt=""></a>
+                    <a href="login.php"><img src="img/core-img/user.svg" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
@@ -113,7 +112,7 @@ require_once 'dbConfig.php';
 
     <div class="containershop">
         <Center>
-            <h1>PRODUCTS</h1>
+            <h1>𝐏𝐑𝐎𝐃𝐔𝐂𝐓𝐒</h1><br>
         </Center>
 
         <!-- Cart basket -->
@@ -122,10 +121,10 @@ require_once 'dbConfig.php';
         </div> -->
 
         <!-- Product list -->
-        <div class="row col-lg-12">
+        <div class="row col-lg-13">
             <?php
             // Get products from database 
-            $result = $db->query("SELECT * FROM tblproduct ORDER BY id DESC LIMIT 10");
+            $result = $db->query("SELECT * FROM tblproduct ORDER BY id DESC LIMIT 15");
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
             ?>

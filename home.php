@@ -86,13 +86,14 @@ require_once 'dbConfig.php';
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
                     <a href=""><img src="img/core-img/user.svg" alt=""></a>
                 </div>
+                
                 <!-- Cart Area -->
                 <div class="cart-area">
                     <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>

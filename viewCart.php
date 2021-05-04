@@ -15,10 +15,10 @@ $cart = new Cart;
 
 <!-- Core Style CSS -->
 <link rel="stylesheet" href="css/core-style.css">
-<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
 
 <!-- jQuery library -->
-<script src="js/jquery.min.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
 
 <script>
 function updateCartItem(obj,id){
@@ -88,9 +88,9 @@ function updateCartItem(obj,id){
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
                     <a href=""><img src="img/core-img/user.svg" alt=""></a>
@@ -109,7 +109,7 @@ function updateCartItem(obj,id){
 
 <div class="container">
 
-    <h1>SHOPPING CART</h1>
+    <h1 class="ml-5">𝐒𝐇𝐎𝐏𝐏𝐈𝐍𝐆 𝐂𝐀𝐑𝐓</h1><br>
     <div class="row">
         <div class="cart">
             <div class="col-12">
@@ -118,7 +118,7 @@ function updateCartItem(obj,id){
                         <thead>
                             <tr>
                                 <th width="45%">Product</th>
-                                <th width="10%">Price</th>
+                                <th width="15%">Price</th>
                                 <th width="15%">Quantity</th>
                                 <th class="text-right" width="20%">Total</th>
                                 <th width="10%"> </th>

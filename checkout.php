@@ -8,7 +8,7 @@ $cart = new Cart;
  
 // If the cart is empty, redirect to the products page 
 if($cart->total_items() <= 0){ 
-    header("Location: index.php"); 
+    header("Location: shop.php"); 
 } 
  
 // Get posted data from session 
@@ -93,12 +93,12 @@ if(!empty($sessData['status']['msg'])){
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href=""><img src="img/core-img/user.svg" alt=""></a>
+                    <a href="login.php"><img src="img/core-img/user.svg" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
@@ -111,7 +111,7 @@ if(!empty($sessData['status']['msg'])){
 <br>
 
 <div class="container">
-    <h1>CHECKOUT</h1>
+    <h1 class="ml-5">CHECKOUT CONFIRMATION</h1><br>
     <div class="col-12">
         <div class="checkout">
             <div class="row">
@@ -125,7 +125,7 @@ if(!empty($sessData['status']['msg'])){
                 </div>
                 <?php } ?>
 				
-                <div class="col-md-4 order-md-2 mb-4">
+                <div class="col-md-4 order-md-2 mb-5">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <span class="text-muted">Your Cart</span>
                         <span class="badge badge-secondary badge-pill"><?php echo $cart->total_items(); ?></span>
@@ -150,7 +150,7 @@ if(!empty($sessData['status']['msg'])){
                             <strong><?php echo '$'.$cart->total(); ?></strong>
                         </li>
                     </ul>
-                    <a href="index.php" class="btn btn-block btn-info">Add Items</a>
+                    <a href="shop.php" class="btn btn-block btn-info">Add Items</a>
                 </div>
                 <div class="col-md-8 order-md-1">
                     <h4 class="mb-3">Contact Details</h4>

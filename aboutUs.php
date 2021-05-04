@@ -89,9 +89,9 @@ require_once 'dbConfig.php';
                     </form>
                 </div>
                 <!-- Favourite Area -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
                     <a href=""><img src="img/core-img/user.svg" alt=""></a>
@@ -188,9 +188,9 @@ require_once 'dbConfig.php';
                 <!-- <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p> -->
             </div>
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="./img/team-img/daryll.JPG">
-                        <h3 class="name">Darryl Vildosola</h3>
+                <div class="col-md-6 col-lg-4 item bg-secondary">
+                    <div class="box mt-4"><img class="rounded-circle" src="./img/team-img/daryll.JPG">
+                        <h3 class="name">Daryll Vildosola</h3>
                         <p class="title">Store Manager</p>
                         <p class="description">Developing store strategies to raise customers' pool, expand 
                             store traffic and optimize profitability. Meeting sales goals by training, motivating, 
@@ -199,8 +199,8 @@ require_once 'dbConfig.php';
                         <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="./img/team-img/april.JPG">
+                <div class="col-md-6 col-lg-4 item bg-secondary">
+                    <div class="box mt-4"><img class="rounded-circle" src="./img/team-img/april.JPG">
                         <h3 class="name">April Grace Diez</h3>
                         <p class="title">Assistant Manager</p>
                         <p class="description">Assist the Retail Store Manager in planning 
@@ -210,8 +210,8 @@ require_once 'dbConfig.php';
                         <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="./img/team-img/aldrin.JPG">
+                <div class="col-md-6 col-lg-4 item bg-secondary">
+                    <div class="box mt-4"><img class="rounded-circle" src="./img/team-img/aldrin.JPG">
                         <h3 class="name">James Aldrin Odiong</h3>
                         <p class="title">Sales Associate</p>
                         <p class="description">Drives sales through engagement of customers, suggestive selling, 
