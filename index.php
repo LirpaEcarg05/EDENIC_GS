@@ -43,7 +43,7 @@ if(isset($_SESSION))
         
     <header class="header_area">
     <div class="custom">
-    <center><small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form ml-5" href="loginAndsignup.html">Log in/Sign up</a><i class="fa fa-facebook-square ml-4" aria-hidden="true"></i><i class="fa fa-instagram ml-1" aria-hidden="true"></i></small></center>
+    <center><small><b>A BEST HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • NASIPIT, TALAMBAN, CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form ml-5" href="loginAndsignup.html">Log in/Sign up</a><i class="fa fa-facebook-square ml-4" aria-hidden="true"></i><i class="fa fa-instagram ml-1" aria-hidden="true"></i></small></center>
     </div>
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
@@ -111,12 +111,12 @@ if(isset($_SESSION))
                <div class="classynav">
                         <ul>
                             
-                            <li><a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a>
-                                <ul class="dropdown">
-                                <li><a href="login.php" >Login/Register</a></li>
+                            <a href="login.php"><img src="img/core-img/user.svg" ></a>
+                                <!-- <ul class="dropdown">
+                                <li><a href="login.php" >Login/Register</a></li> -->
                                   
                                 </ul>
-                            </li>
+                            
                         </ul>
                     </div>
                </div>

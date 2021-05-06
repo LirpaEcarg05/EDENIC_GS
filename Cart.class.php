@@ -140,8 +140,7 @@ class Cart {
     } 
      
     /** 
-     * Save the cart array to the session 
-     * @return    bool 
+     * Save the cart array to the session  
      */ 
     protected function save_cart(){ 
         $this->cart_contents['total_items'] = $this->cart_contents['cart_total'] = 0; 
@@ -167,9 +166,7 @@ class Cart {
     } 
      
     /** 
-     * Remove Item: Removes an item from the cart 
-     * @param    int 
-     * @return    bool 
+     * Remove Item: Removes an item from the cart  
      */ 
      public function remove($row_id){ 
         // unset & save 
@@ -179,8 +176,7 @@ class Cart {
      } 
       
     /** 
-     * Destroy the cart: Empties the cart and destroy the session 
-     * @return    void 
+     * Destroy the cart: Empties the cart and destroy the session  
      */ 
     public function destroy(){ 
         $this->cart_contents = array('cart_total' => 0, 'total_items' => 0); 
