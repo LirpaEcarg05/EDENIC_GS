@@ -1,8 +1,8 @@
 .custom{
-    /* text-align: center; */
+    text-align: center;
     background-color: lightgray;
 }
-/* .form{
-    float: right;
+.form{
+    float: center;
     margin-right: 20%;
-}  */
+} 

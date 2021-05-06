@@ -68,14 +68,18 @@ function updateCartItem(obj,id){
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
+                           
                             <li><a href="plantcare.php">Plant Care</a></li>
                             <li><a href="contact.php">Contact</a>
 
 
+                     
                         </ul>
                     </div>
                     <!-- Nav End -->
+                   
                 </div>
+              
             </nav>
 
             <!-- Header Meta Data -->
@@ -87,14 +91,31 @@ function updateCartItem(obj,id){
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
+               
                 <!-- Favourite Area -->
                 <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href=""><img src="img/core-img/user.svg" alt=""></a>
-                </div>
+                   
+                        <!-- <a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a> -->
+                    
+                   
+               <div class="classynav">
+                        <ul>
+                            
+                            <li><a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a>
+                                <ul class="dropdown">
+                               
+                                    <li><a href="login.php?logout=true" >Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+            
+                
                 <!-- Cart Area -->
                 <div class="cart-area">
                     <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
@@ -104,6 +125,7 @@ function updateCartItem(obj,id){
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
+
 
 <br><br>
 
@@ -133,9 +155,9 @@ function updateCartItem(obj,id){
                             ?>
                             <tr>
                                 <td><?php echo $item["name"]; ?></td>
-                                <td><?php echo '$'.$item["price"].' USD'; ?></td>
+                                <td><?php echo 'Php'.$item["price"]; ?></td>
                                 <td><input class="form-control" type="number" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"/></td>
-                                <td class="text-right"><?php echo '$'.$item["subtotal"].' USD'; ?></td>
+                                <td class="text-right"><?php echo 'Php '.$item["subtotal"]; ?></td>
                                 <td class="text-right"><button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')?window.location.href='cartAction.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>':false;"><i class="itrash"></i> Delete</button> </td>
                             </tr>
                             <?php } }else{ ?>
@@ -146,7 +168,7 @@ function updateCartItem(obj,id){
                                 <td></td>
                                 <td></td>
                                 <td><strong>Cart Total</strong></td>
-                                <td class="text-right"><strong><?php echo '$'.$cart->total().' USD'; ?></strong></td>
+                                <td class="text-right"><strong><?php echo 'Php '.$cart->total(); ?></strong></td>
                                 <td></td>
                             </tr>
                             <?php } ?>

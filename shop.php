@@ -22,7 +22,7 @@ require_once 'dbConfig.php';
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/core-style.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
 
@@ -38,8 +38,12 @@ require_once 'dbConfig.php';
 </head>
 
 <body>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header_area">
+     <!-- ##### Header Area Start ##### -->
+     <header class="header_area">
+        <!-- <div class="html custom html_topbar_left">
+            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
+        </div> -->
+
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
@@ -56,9 +60,9 @@ require_once 'dbConfig.php';
                         <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                     </div>
                     <!-- Nav Start -->
-                    <div class="classynav mt-3">
+                    <div class="classynav">
                         <ul>
-                            <li><a href="shop.php" class="">Shop</a>
+                            <li><a href="shop.php">Shop</a>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
@@ -69,14 +73,18 @@ require_once 'dbConfig.php';
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
+                           
                             <li><a href="plantcare.php">Plant Care</a></li>
                             <li><a href="contact.php">Contact</a>
 
 
+                     
                         </ul>
                     </div>
                     <!-- Nav End -->
+                   
                 </div>
+              
             </nav>
 
             <!-- Header Meta Data -->
@@ -88,25 +96,41 @@ require_once 'dbConfig.php';
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
+               
                 <!-- Favourite Area -->
                 <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="login.php"><img src="img/core-img/user.svg" alt=""></a>
-                </div>
+                   
+                        <!-- <a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a> -->
+                    
+                   
+               <div class="classynav">
+                        <ul>
+                            
+                            <li><a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a>
+                                <ul class="dropdown">
+                                    <li><a href="login.php?logout=true">Logout</a></li>
+                                   
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+            
+                
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt="">
-                        <span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span>
-                    </a>
+                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
                 </div>
             </div>
 
         </div>
-    </header><br><br><br><br><br>
-    <!-- ##### Header Area End ##### -->
+    </header>
+    <!-- ##### Header Area End ##### --><br><br><br><br><br>
+    
 
 
 
@@ -128,17 +152,17 @@ require_once 'dbConfig.php';
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
             ?>
-                    <div class="card col-lg-4">
-                        <div class="card-body">
+                    <div class="card col-lg-6 ">
+                        <div class="card-body float-center">
                             <center>
                                 <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo '$' . $row["price"] . ' USD'; ?></h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo 'Php '  . $row["price"]    ; ?></h6>
                             </center>
-                            <div style="margin-left:55px" class="product-image"><img class="ml-5 mt-3" style="height:140px;width:160px;" src="<?php echo $row["image"]; ?>"></div>
+                            <div style="margin-left:105px" class="product-image"><img class="ml-5 mt-3" style="height:140px;width:160px;" src="<?php echo $row["image"]; ?>"></div>
 
                             <!-- <p class="card-text"><?php echo $row["image"]; ?></p> -->
                             <center>
-                                <a style="margin-top:15px" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary">Add to Cart</a>
+                                <a style="margin-top:15px" href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary" ><i class="fa fa-cart-plus" aria-hidden="true"></i>    Add to Cart</a>
                             </center>
                         </div>
                     </div>

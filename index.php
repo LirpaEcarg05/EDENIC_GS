@@ -38,16 +38,18 @@ if(isset($_SESSION))
 
 <body>
     <!-- ##### Header Area Start ##### -->
+    
+            
+        
     <header class="header_area">
-        <!-- <div class="html custom html_topbar_left">
-            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
-        </div> -->
-
+    <div class="custom">
+    <center><small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form ml-5" href="loginAndsignup.html">Log in/Sign up</a><i class="fa fa-facebook-square ml-4" aria-hidden="true"></i><i class="fa fa-instagram ml-1" aria-hidden="true"></i></small></center>
+    </div>
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
                 <!-- Logo -->
-                <a class="nav-brand" href="home.php"><img src="img/core-img/LOGO5.png" alt=""></a>
+                <a class="nav-brand" href="index.php"><img src="img/core-img/LOGO5.png" alt=""></a>
                 <!-- Navbar Toggler -->
                 <div class="classy-navbar-toggler">
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -111,8 +113,8 @@ if(isset($_SESSION))
                             
                             <li><a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a>
                                 <ul class="dropdown">
-                                <!-- <li><a href="login.php" >Login/Register</a></li> -->
-                                    <li><a href="login.php?logout=true" >Logout</a></li>
+                                <li><a href="login.php" >Login/Register</a></li>
+                                  
                                 </ul>
                             </li>
                         </ul>
@@ -122,7 +124,7 @@ if(isset($_SESSION))
                 
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
+                    <a href="login.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>
                 </div>
             </div>
 
@@ -139,7 +141,7 @@ if(isset($_SESSION))
                     <div class="hero-content">
                         <h6>Choose Best</h6>
                         <h2>Accessories for gracious <br> living.</h2>
-                        <a href="shop.php" class="btn essence-btn">view collection</a>
+                        <a href="login.php" class="btn essence-btn">view collection</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +157,7 @@ if(isset($_SESSION))
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg22.jpg);">
                         <div class="catagory-content">
-                            <a href="#">Outdoor Plants</a>
+                            <a href="login.php">Outdoor Plants</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +165,7 @@ if(isset($_SESSION))
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg23.jpg);">
                         <div class="catagory-content">
-                            <a href="#">Indoor Plants</a>
+                            <a href="login.php">Indoor Plants</a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +173,7 @@ if(isset($_SESSION))
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg24.jpg);">
                         <div class="catagory-content">
-                            <a href="#">Herbs</a>
+                            <a href="login.php">Herbs</a>
                         </div>
                     </div>
                 </div>
@@ -241,7 +243,7 @@ if(isset($_SESSION))
                                 <div class="hover-content">
                                     <!-- Add to Cart -->
                                     <div class="add-to-cart-btn">
-                                        <a href="shop.php" class="btn essence-btn">Add to Cart</a>
+                                        <a href="login.php" class="btn essence-btn">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -271,7 +273,7 @@ if(isset($_SESSION))
                                 <div class="hover-content">
                                     <!-- Add to Cart -->
                                     <div class="add-to-cart-btn">
-                                        <a href="shop.php" class="btn essence-btn">Add to Cart</a>
+                                        <a href="login.php" class="btn essence-btn">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -307,7 +309,7 @@ if(isset($_SESSION))
                                 <div class="hover-content">
                                     <!-- Add to Cart -->
                                     <div class="add-to-cart-btn">
-                                        <a href="shop.php" class="btn essence-btn">Add to Cart</a>
+                                        <a href="login.php" class="btn essence-btn">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +345,7 @@ if(isset($_SESSION))
                                 <div class="hover-content">
                                     <!-- Add to Cart -->
                                     <div class="add-to-cart-btn">
-                                        <a href="shop.php" class="btn essence-btn">Add to Cart</a>
+                                        <a href="login.php" class="btn essence-btn">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>

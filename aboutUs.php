@@ -53,30 +53,29 @@ require_once 'dbConfig.php';
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-                            <li><a href="shop.php">Shop</a></li>
+                            <li><a href="shop.php">Shop</a>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="home.php">Home</a></li>
                                     <li><a href="shop.php">Shop</a></li>
-                                    <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
                                     <li><a href="checkout.php">Checkout</a></li>
                                     <li><a href="plantcare.php">Plant Care</a></li>
-                                    <li><a href="single-blog.html">About Us</a></li>
-                                    <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
+                                    <li><a href="aboutUs.php">About Us</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
+                           
                             <li><a href="plantcare.php">Plant Care</a></li>
                             <li><a href="contact.php">Contact</a>
-                                <!-- <ul class="dropdown">
-                                    <li><a href="home.php">Home</a></li>
-                                    <li><a href="contact.php">Contact</a>
-                            </li> -->
 
+
+                     
                         </ul>
                     </div>
                     <!-- Nav End -->
+                   
                 </div>
+              
             </nav>
 
             <!-- Header Meta Data -->
@@ -88,14 +87,33 @@ require_once 'dbConfig.php';
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
+               
                 <!-- Favourite Area -->
                 <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href=""><img src="img/core-img/user.svg" alt=""></a>
-                </div>
+                   
+                        <!-- <a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a> -->
+                    
+                   
+               <div class="classynav">
+                        <ul>
+                            
+                            <li><a href="">
+                            
+                            <img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle mt-4"></a>
+                                <ul class="dropdown">
+                                
+                                    <li><a href="login.php?logout=true" >Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+            
+                
                 <!-- Cart Area -->
                 <div class="cart-area">
                     <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>

@@ -47,6 +47,10 @@ require_once 'dbConfig.php';
 <body>
     <!-- ##### Header Area Start ##### -->
     <header class="header_area">
+        <!-- <div class="html custom html_topbar_left">
+            <small><b>HANDPICKED PLANTS DELIVER TO YOUR DOORSTEP • CEBU CITY DELIVERY ONLY • LOWER DELIVERY RATES <a class="form" href="loginAndsignup.html">Log in/Sign up</a></small>
+        </div> -->
+
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
@@ -76,14 +80,18 @@ require_once 'dbConfig.php';
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </li>
+                           
                             <li><a href="plantcare.php">Plant Care</a></li>
                             <li><a href="contact.php">Contact</a>
-                                
 
+
+                     
                         </ul>
                     </div>
                     <!-- Nav End -->
+                   
                 </div>
+              
             </nav>
 
             <!-- Header Meta Data -->
@@ -95,14 +103,31 @@ require_once 'dbConfig.php';
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
+               
                 <!-- Favourite Area -->
                 <!-- <div class="favourite-area">
                     <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="#"><img src="img/core-img/user.svg" alt=""></a>
-                </div>
+                   
+                        <!-- <a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a> -->
+                    
+                   
+               <div class="classynav">
+                        <ul>
+                            
+                            <li><a href=""><img src="img/core-img/user.svg" alt="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"></a>
+                                <ul class="dropdown">
+                                    <li><a href="login.php?logout=true">Logout</a></li>
+                                   
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+            
+                
                 <!-- Cart Area -->
                 <div class="cart-area">
                     <a href="viewCart.php" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""><span class="badge badge-light mt-4"><?php echo $cart->total_items() > 0 ? $cart->total_items() : "0"; ?></span> </a>

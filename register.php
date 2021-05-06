@@ -1,14 +1,51 @@
-
 <?php
-//  session_start();
-// if(isset($_SESSION['logged-in'])){
-//   header("Location: home.php");
-//   exit;
-// }
+
 require_once('store.php');
 
 $mystore->login();
 
+?>
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "products";
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['submit'])){
+    
+  $firstName= $_POST['firstname'];
+  $lastName= $_POST['lastname'];
+  $email= $_POST['email'];
+  $password= $_POST['password'];
+
+
+ 
+
+ 
+
+  $sql = "INSERT INTO users(first_name,last_name,email,password)
+  VALUES ( '$firstName','$lastName','$email','$password')";
+
+   if ($conn->query($sql) === TRUE) {
+       //  echo '<script>alert("Account Successfully Created")</script>';
+       header("location:login.php");
+        
+    //  include "menu.php";
+
+   } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+   }
+  }
+ $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -189,49 +226,42 @@ i span {
     <body>
   <div class="bg-img">
     <div class="content">
-      <header>Login Form</header>
-
-      <!-- --------------------------------------- -->
+      <header>Signup Form</header>
       <form action="" method="POST">
-
         <div class="field">
           <span class="fa fa-user"></span>
-          <input type="text" name ="username"  id="username" required placeholder="Email or Phone">
+          <input type="text" name ="firstname"  id="firstname" required placeholder="Firstname">
         </div>
-
+        
+        <br>
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input type="text" name ="lastname"  id="lastname" required placeholder="Lastname">
+        </div>
+        <br>
+        <div class="field">
+          <span class="fas fa-envelope-square"></span>
+          <input type="email" name ="email"  id="email" required placeholder="Email">
+        </div>
         <div class="field space">
           <span class="fa fa-lock"></span>
           <input type="password"  name ="password"  id="password"  class="pass-key" required placeholder="Password">
-          <!-- <span class="show">SHOW</span> -->
+          <span class="show">SHOW</span>
         </div>
-
-        <div class="pass">
-          <a href="#">Forgot Password?</a>
-        </div>
-
+        <!-- <div class="field space">
+          <span class="fa fa-lock"></span>
+          <input type="password"  name ="password2"  id="password2"  class="pass-key" required placeholder="Confirm Password">
+          <span class="show">SHOW</span>
+        </div> -->
+        <br>
         <div class="field">
-          <input type="submit" name="submits" value="LOGIN">
+          <input type="submit" name="submit" value="SUBMIT">
         </div>
       </form>
-      <div  class="login" >Or login with</div>
-      <div class="links">
-        <div class="facebook ">
-          <i class="fab fa-facebook-f"><span>Facebook</span></i>
-        </div>
-        <div class="instagram">
-          <i class="fab fa-instagram"><span>Instagram</span></i>
-        </div>
-      </div>
-      <div class="signup">Don't have account?
-        <a href="register.php">Signup Now</a>
-      </div>
+      
     </div>
-
-   
-
-
   </div>
- <!-- <script>
+ <script>
    const pass_field = document.querySelector(".pass-key");
 const showBtn = document.querySelector(".show");
 showBtn.addEventListener("click", function () {
@@ -246,7 +276,7 @@ showBtn.addEventListener("click", function () {
   }
 });
 
- </script> -->
-</body>
+</script>
+
 </body>
 </html>

@@ -34,7 +34,7 @@ class MyStore{
          }
          public function getUsers(){
              $connection = $this->openConnection();
-             $statement = $connection -> prepare("SELECT * FROM customers");
+             $statement = $connection -> prepare("SELECT * FROM users");
              $statement ->execute();
              $users = $statement -> fetchAll();
              $usersCount = $statement->rowCount();
@@ -57,7 +57,7 @@ class MyStore{
 
                 $connection = $this -> openConnection();
                 $statement = $connection->prepare ("SELECT * FROM 
-                customers    WHERE email =? AND password =?");
+                users   WHERE email =? AND password =?");
                 $statement->execute([$username,$password]);
                 $user = $statement ->fetch();
                 $total = $statement->rowCount();
@@ -65,7 +65,8 @@ class MyStore{
 
                 if ($total>0){
                     
-                 echo    header('location:/Guided Study/EDENIC/home.php');
+                    
+                 header('location:home.php');
 
                 }
                 else {
@@ -81,7 +82,7 @@ class MyStore{
                unset($_SESSION['password']);
 
                 session_destroy();
-                header("location:/carton/plant/login.php?logout=true");
+                header("location:login.php?logout=true");
                 exit;
             }
         }

@@ -7,12 +7,12 @@ if (!isset($_REQUEST['id'])) {
 require_once 'dbConfig.php';
 
 // Fetch order details from database 
-$result = $db->query("SELECT r.*, c.first_name, c.last_name, c.email, c.phone FROM orders as r LEFT JOIN customers as c ON c.id = r.customer_id WHERE r.id = " . $_REQUEST['id']);
+$result = $db->query("SELECT r.*, c.first_name, c.last_name, c.email, c.phone FROM orders as r LEFT JOIN customers as c ON c.first_name = r.customer_name WHERE r.id = " . $_REQUEST['id']);
 
 if ($result->num_rows > 0) {
     $orderInfo = $result->fetch_assoc();
 } else {
-    header("Location: index.php");
+    header("Location: home.php");
 }
 ?>
 
